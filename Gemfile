@@ -36,13 +36,6 @@ gem "figaro"
 
 gem 'aws-sdk', '~> 2'
 
-gem 'capistrano', '~> 3.1.0'
-gem 'capistrano-bundler', '~> 1.1.2'
-gem 'capistrano-rails', '~> 1.1.1'
-
-# Add this if you're using rbenv
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -60,6 +53,11 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'capistrano', '~> 3.4'
+  gem 'capistrano-rails', '~> 1.1.3'
+
+# Add this if you're using rbenv
+  gem 'capistrano-rbenv', '~> 2.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
