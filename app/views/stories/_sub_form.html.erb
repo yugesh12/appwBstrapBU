@@ -1,0 +1,16 @@
+
+<div class="subform_contianer">
+ <%= form_for :subscription, url: subscribe_path do |subscribe_form| %>
+                        
+
+                        
+        <%= subscribe_form.label :name, 'Name:'%><br>
+        <%= subscribe_form.text_field :name, class: "full_width black" %><br>
+
+        <%= subscribe_form.label :email, 'E-mail:'%><br>
+        <%= subscribe_form.text_field :email, class: "full_width black" %><br>
+                      
+        <%= subscribe_form.submit "Send", class: "black" %><br>
+                      
+            <% end %>
+</div>

@@ -1,0 +1,94 @@
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF 8">
+<link href='https://fonts.googleapis.com/css?family=Ek+Mukta:400,200,300,600,500,700,800' rel='stylesheet' type='text/css'>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Diqital - Partner in Digital</title>
+</head>
+<body>
+
+    <%= render 'navbar' %>
+<!--
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>-->
+
+<%= yield %>
+ 
+
+<article class="container_fluid white" style="background-color: red;" id="wrapper_contact">
+    <div class="col-12 wrapper_inner_contact contact_p">
+
+        <h3 class="white">Meer weten?</h3><br>
+        <p class="tekst white">Vrijblijvend eerste consult? Heeft u een vraag? </p><br><br>
+        <%= form_for :message, url: contact_path do |message_form| %>
+                        
+
+            <div>
+                <div class="radio_buttons">
+                        <%= message_form.radio_button :topic, 'algemeen', :value => 'algemeen' %>
+                        <%= label :topic, 'Algemene vragen' %>
+                </div>
+
+                <div class="radio_buttons">
+                   <%= message_form.radio_button :topic, 'press', :value => 'algemeen' %>                        
+                    <%= label :topic, 'Voor de pers' %>
+                </div>
+
+                <div class="radio_buttons">
+                    <%= message_form.radio_button :topic, 'business', :value => 'algemeen' %>
+                    <%= label :topic, 'Zakelijke vragen' %>
+                </div>
+            </div>
+
+            <div class="row1">
+                <%= message_form.label :name, 'Naam:'%><br>
+                <%= message_form.text_field :name, class:"full_width black"%>
+            </div>
+                                
+            <div class="row1">
+                <%= message_form.label :email, 'E-mail:'%><br>
+                <%= message_form.email_field :email, class:"full_width black" %>
+            </div>
+
+            <div class="field">
+                <%= message_form.label :Message, 'Bericht:'%><br>
+                <%= message_form.text_area :content, class: "full_width heightBox black" %>
+            </div><br>
+                          
+            <div class="field black">
+                <%= message_form.submit "Send" %>
+            </div>
+                      
+        <% end %><br><br>
+            <p id="form-tekst">Al uw gegevens zijn vertrouwlijk</p>
+    </div>
+    <div class="clearfix"></div>
+</article>
+
+
+   
+
+    <footer id="footer">
+    sitemap
+    </footer>
+
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
+</body>
+</html>
+
+
+
+

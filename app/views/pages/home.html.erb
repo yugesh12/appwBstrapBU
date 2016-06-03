@@ -1,0 +1,147 @@
+<div id="overlay_video"></div>
+<div id="videoBox">
+    <iframe id="overlay_2068_player" width="560" height="315" src="https://www.youtube.com/embed/z5tugxy70MY" frameborder="0" allowfullscreen></iframe>  
+    <button onmousedown="toggleOverlay()">close</button>
+</div>
+
+    <article class="wrapper_home_landing container_fluid">
+        <div class="overlay_black"></div>      
+
+        <div class="row container_home_landing place_middle">
+            <div class="col-lg-6 col-md-9 col-sm-10 col-xs-10 col-centered">
+                <h1 class="tagline white">Wij maken de</h1><h1 class="tagline red" id="tagline2">diqitale</h1><h1 class="tagline white">leiders van de toekomst</h1>
+            </div>
+        <div class="col-lg-6 col-md-9 col-sm-10 hidden-xs col-centered">
+                <p class="white titel_tekst">
+                    Wij van DIQITAL zijn uw partner in uw digitale transformatie. Wij leren bedrijven en mensen master storytellers te zijn, een hechte relatie op te bouwen met online consumenten en strategisch gebruik te maken van alle hulpmiddellen van het online tijdperk.</p>            
+            </div>
+
+        <div class="hidden-lg hidden-md hidden-sm col-xs-10 col-centered">
+        <p class="white titel_tekst">
+                    Bekijk onze artikelen voor onze expertise.</p> 
+        </div>
+        <div class="box_home_landing box white_box col-centered"><%= link_to " > ", articles_path, class: "pijl"%><%= link_to "Publicaties", articles_path, class: "link_tekst"%>
+        </div>
+
+        </div>
+        
+    </article>
+            <div class="down_arrow"><figure><%= image_tag('down_arrow.png', class: "full_size")%></figure></div>
+
+
+
+<article class="container_fluid col-12" id="wrapper_diensten"> 
+    <div class="overlay_white"></div>
+        <div class="col-12 wrapper_inner ">
+            <h2>Onze Diensten</h2><br>
+            <p class="tekst">Wij gebruiken onze kennis om een op maat gemaakte online business strategie te formuleren die gebouwd is voor de lange termijn.</p>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-dienst">
+                <section class="section_diensten">
+                <aside class="aside_dienst"><figure><%= image_tag('as1.png', class: "full_size")%></figure></aside>
+                <h4 class="h4_index">Digital Transformatie</h4>
+                <p class="text_shade klein">Strategic Business Models<br>Social Media Content</p></section>
+
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-dienst">
+                <section class="section_diensten">
+                    <aside class="aside_dienst"><figure><%= image_tag('as2.png', class: "full_size")%></figure></aside>
+                    <h4 class="h4_index">Klant Ervaring</h4>
+                    <p class="text_shade klein">Branding<br>Customer Relationship Management</p></section>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 col-dienst">
+                    <section class="section_diensten">    
+                    <aside class="aside_dienst"><figure><%= image_tag('as3.png', class: "full_size")%></figure></aside>
+                    <h4 class="h4_index">Online Marketing</h4>
+                    <p class="text_shade klein">Social Media Advertenties<br>SEO</p></section>
+            </div>
+        </div>
+
+    <div class="clearfix"></div>
+
+    <div class="box black_box" id="dienst_box"><%= link_to " > ", services_path, class: "pijl"%><%= link_to "Meer informatie", services_path, class: "link_tekst link_black"%></div>
+
+</article>
+
+<article class="container_fluid col-12 wrapper_home" id="wrapper_blog">   
+    <div class="overlay_black"></div>
+        <div class="col-12 wrapper_inner">
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h2 class="white">Artikel_titel</h2>
+                    <br><br>
+                    <p class="tekst white">
+
+                        Tekst van het artikel<br><br>
+
+                    </p>
+                    <br><br>
+                    <div class="box white_box"><%= link_to " > ", articles_path, class: "pijl"%><%= link_to "Lees meer", articles_path, class: "link_tekst"%></div>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <figure>
+                    <%= image_tag('missie.gif', class: "full_size")%>              </figure> 
+            </div>
+
+        </div>
+    <div class="clearfix"></div>
+</article>
+
+
+
+
+
+<article class="container_fluid col-12 wrapper_home" id="wrapper_klant_ervaring">   
+    <div class="overlay_white"></div>
+        <div class="col-12 wrapper_inner">
+            
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <figure>
+                    <button onmousedown="toggleOverlay()"><%= image_tag('ytIMG.jpg', class: "full_size")%></button>
+                    </figure> 
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h2>Hoe onze klanten ons ervaren</h2>
+                    <br><br>
+                    <p class="tekst text_shade">XXX van XXXX doet XXXX. Als startende ondernemer met een passie voor XXXX wist hij al lang wat hij wilde doen. <br><br>Zijn passie is de drijvende kracht achter XXXX, wij waren de katalysator.<br><br>
+                    </p>
+                    <br><br>
+                    <div class="box black_box"><%= link_to " > ", stories_path, class: "pijl"%><%= link_to "Meer Verhalen", stories_path, class: "link_tekst link_black"%></div>
+            
+            </div>
+
+        </div>
+    <div class="clearfix"></div>
+</article>
+
+
+
+<article class="container_fluid col-12 wrapper_home" id="wrapper_over_ons">   
+    <div class="overlay_black"></div>
+        <div class="col-12 wrapper_inner">
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h2 class="white">Over Ons</h2>
+                    <br><br>
+                    <p class="tekst white">
+
+                        Ons werk bestaat uit kennis verspreiden over online business. Op onze pagina met <a href="#">artikelen</a> publiceren wij adviezen over branding, social media en onze andere gebieden van expertise. Stel gerust een vraag op Facebook, Instagram, twitter of per mail. Wij helpen u binnen een dag verder.<br><br>
+
+                    </p>
+                    <br><br>
+                    <div class="box white_box"><%= link_to " > ", pages_over_ons_path, class: "pijl"%><%= link_to "Meer Over Ons", pages_over_ons_path, class: "link_tekst"%></div>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <figure>
+                    <%= image_tag('missie.gif', class: "full_size")%>              </figure> 
+            </div>
+
+        </div>
+    <div class="clearfix"></div>
+</article>

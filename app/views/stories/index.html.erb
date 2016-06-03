@@ -1,0 +1,157 @@
+<!--<div id="overlay_video"></div>
+<div id="videoBox">
+    <iframe id="overlay_2068_player" width="560" height="315" src="https://www.youtube.com/embed/z5tugxy70MY" frameborder="0" allowfullscreen></iframe>  
+    <button onmousedown="toggleOverlay()">close</button>
+</div>
+
+
+
+    <article class="wrapper wrapper_type2_45_stories black">
+        <button class="button_container button_z" onmousedown="toggleOverlay()"><%=image_tag('play_icon2', class: "play_icon")%></button>
+        
+        <div class="story_figuur naast_elkaar" onmousedown="toggleOverlay()">
+        <%= image_tag @story_last.image.url(:medium)%>
+
+        </div>
+
+
+        <section class="subheader_container_story naast_elkaar">
+            <div class="line_div">
+                <h2 class="hashtag_story">#<%= @story_last.tag %></h2>
+
+            </div><br>
+                <% if user_signed_in? %>
+
+                <p><%= link_to 'Destroy', story_path(@story_last), method: :delete, data: { confirm: 'Are you sure?' }, class: "black" %>
+                <%= link_to 'Edit', edit_story_path(@story_last), class: "black" %></p><% end %>
+
+            <div class><%= social_share_button_tag(@story_last.title, :popup => "true")%></div><br>
+
+            <div>
+
+                <p class="p_head"><%= @story_last.created_at.strftime("%d %b. %Y") %> - <%= @story_last.consumeTime %> min watch</p><br>
+
+                <%= link_to @story_last.title, story_path(@story_last), class: "blog_entry_titel black" %>
+                <hr><br><br>
+                <p><%=@story_last.content %>
+                
+                <br><br>
+                
+                <%= link_to 'Lees Meer', story_path(@story_last), class: "lees_meer" %>
+
+                </p>
+                
+            </div>
+        </section>
+
+    </article>
+    <br><br><hr class="scheiding_story"><br><br>
+<div class="test_loop">
+  <% @stories.each do |story| %>
+            <article class="inline_vidBox">
+                <%= link_to story_path(story), class: "story_link_container" do %>
+
+                <div class="overlay_story_multiple"></div>
+
+                <div class="story_figuur_multiple">
+                <%= image_tag story.image.url(:medium)%>
+                </div>
+                <% end %>
+
+                <div class="wrap_multiple">
+                <h2 class="hashtag_story_multiple">#<%= story.tag %></h2>
+                <%= link_to story.title, story_path(story), class: "blog_entry_titel_multiple black" %>
+        
+            </article>
+<% end %>
+
+</div>
+<br>-->
+
+<div id="overlay_video"></div>
+<div id="videoBox">
+    <iframe id="overlay_2068_player" width="560" height="315" src="https://www.youtube.com/embed/z5tugxy70MY" frameborder="0" allowfullscreen></iframe>  
+    <button onmousedown="toggleOverlay()">close</button>
+</div>
+
+
+<article class="container_fluid test_wrap2" id="wrapper_diensten"> 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+        <div class="row max_full_width">
+
+
+            <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12" onmousedown="toggleOverlay()">
+        
+                <button class="button_container "><%=image_tag('play_icon2', class: "play_icon1 place_middle")%></button>
+                <div class="overlay_select"></div>
+                <figure class="story_figuur">
+                <%= image_tag @story_last.image.url(:large)%>
+                </figure>
+
+            </div> 
+
+
+            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h6 class="blog_tag">#<%= @story_last.tag %></h6>
+                    <h2 class="blog_titel"><%= link_to @story_last.title, story_path(@story_last), class: "black"%></h2>
+                    <hr>
+                    <% if user_signed_in? %>
+                    <p><%= link_to 'Destroy', story_path(@story_last), method: :delete, data: { confirm: 'Are you sure?' }, class: "black" %>
+                    <%= link_to 'Edit', edit_story_path(@story_last), class: "black" %></p><% end %>
+                   
+                    
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br>
+                        <%= social_share_button_tag(@story_last.title, :popup => "true")%><br>
+
+                        <p class="blog_preview"><%= @story_last.created_at.strftime("%d %b. %Y") %> - <%= @story_last.consumeTime %> min vid</p><br>
+                        <p><%=@story_last.content %>
+                        </p>
+
+
+                    </div>
+
+            </div> 
+
+   
+
+        <div class="col-lg-4 Col-md-5 col-sm-12 col-xs-12 ">
+            <div class="subscribe_container bgb">
+                <h1 class="white alignright">Subscribe voor Exclusieve content.</h1>
+                <div class="white subform_wrapper"><%=render('sub_form')%><br></div>
+            </div>
+                <ul class="social_links">
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_tw.png"), 'https://www.twitter.com' %></button></li>
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_ig.png"), 'https://www.instagram.com' %></button></li>
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_fb.png"), 'https://www.facebook.com' %></button></li>
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_yt.png"), 'https://www.youtube.com' %></button></li>
+                </ul>
+        </div>
+
+        </div> 
+
+</article>
+<br><hr><br>
+
+
+
+
+<div class="container-fluid">
+        <div class="row wrap_stories">
+            <% @stories.each do |story| %>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 container_story">
+
+                    <figure class="figure_multiple"><%= link_to image_tag(story.image.url(:large)), story_path(story)%></figure>
+                    <div class="subtitle_multiple">
+                    <div class="place_middle"><h5 class="index_story_title"><%= story.title %></h5>
+                    <h6 class="blog_tag_multiple">#<%= @story_last.tag %></h6></div>
+                    </div>
+
+                </div>
+            <% end %>
+        </div>
+
+        <div class="clearfix"></div>
+</div>

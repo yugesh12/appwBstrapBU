@@ -1,0 +1,31 @@
+
+            <nav class="navbar navbar-default navbar-fixed-top vertical-centre">
+                <div class="container-fluid">
+
+                    <div class="navbar-header ">
+                        <ul id="left">
+                        <li id="naam"><%=link_to('Diqital', root_path, class: "navbar-brand black") %></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul id="middle" class="nav navbar-nav">
+                            <li id="diensten" class="middle "><%=link_to 'Diensten', services_path, class: "black"%></li>
+                            <li id="leer" class="middle"><%=link_to 'Blog', articles_path, class: "black"  %></li>
+                            <li id="Verhalen" class="middle"><%=link_to 'Cases', stories_path, class: "black" %></li>
+                            <% if user_signed_in? %>
+                                <li id="nieuw" class="middle"><%= link_to 'New article', new_article_path, class: "black"%></li>
+                            <% end %>                        
+
+                                <li id="search_li"><%= render('search_form')%></li>
+
+                        </ul>
+                    </div>
+                
+                    <div>
+                        <ul id="right" class="nav navbar-nav pull-right">
+                            <li id="contact2"><%= link_to "Contact", anchor: "wrapper_contact" %></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>   

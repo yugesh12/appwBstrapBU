@@ -1,0 +1,71 @@
+        <br><br><br>
+        <br><br><br><br>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 back_cont">
+            <figure>
+                <%= image_tag(@story.image.url(:large))%>
+            </figure>
+        </div> 
+<article class="container_fluid test_wrap" id="wrapper_diensten"> 
+
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 h50 fixed_blog zp1"><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="container_social_share">
+            <%= social_share_button_tag(@story.title, :popup => "true", class: "social_share_shift") %></div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-7 col-sm-7 col-xs-11 col-lg-offset-1 col-md-offset-1 col-sm-offset-0 col-xs-offset-1">
+            <% if user_signed_in? %>
+            <p><%= link_to 'Destroy', story_path(@story), method: :delete, data: { confirm: 'Are you sure?' }, class: "black" %>
+            <%= link_to 'Edit', edit_story_path(@story), class: "black" %>
+            <% end %>
+
+            <%= link_to 'Back', stories_path, class: "black" %></p><br>
+                <h3 class="header_article"><%= @story.title %></h3><hr class="article_show_hr">
+
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                <figure class="user_avatar"><%= image_tag(@story.image.url(:medium))%></figure>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <h6>by YSR <br><br>Twitter handle</h6>
+                </div>     
+
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+                    <p class="bold"><%= @story.created_at.strftime("%d %b. %Y") %> - <%= @story.consumeTime %> min read</p>
+                </div> 
+                
+                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><br><%= @story.content %></p>
+                          
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-11 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-1">
+            <div class="subscribe_container bgb">
+                <h1 class="white alignright">Subscribe voor Exclusieve content.</h1>
+                <div class="white subform_wrapper"><%=render('sub_form')%><br></div>
+            </div>
+                <ul class="social_links">
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_tw.png"), 'https://www.twitter.com' %></button></li>
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_ig.png"), 'https://www.instagram.com' %></button></li>
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_fb.png"), 'https://www.facebook.com' %></button></li>
+                    <li class="sm_list"><button class="sm_button_bw"><%= link_to image_tag("icon_bw_yt.png"), 'https://www.youtube.com' %></button></li>
+                </ul>
+
+            <div class="must_read_container">
+                <h2 class="alignright">Must Read!</h2>
+                <figure></figure>
+                <h3 class="black">Test Titel</h3>
+                <hr>
+                <p>Dit artikel gaat over blablabla</p>  
+
+            </div>
+
+        </div>
+
+    <div class="clearfix"></div>
+
+
+</article>
+
