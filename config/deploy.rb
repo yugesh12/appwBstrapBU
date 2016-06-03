@@ -2,13 +2,13 @@
 lock '3.5.0'
 
 set :application, 'diqital_boot'
-set :repo_url, 'git@github.com:yugesh12/appwBstrap.git'
+set :repo_url, 'https://github.com/yugesh12/appwBstrap.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/deplou/diqital_boot'
+set :deploy_to, '/home/deploy/diqital_boot'
 
 # Default value for :scm is :git
 # set :scm, :git
